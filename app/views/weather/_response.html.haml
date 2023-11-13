@@ -1,0 +1,29 @@
+- if @forecast.cached
+    .badge.text-bg-warning
+        Cached data
+.py-5.text-center.container
+    %h2.fw-normal
+        = "#{@forecast.current&.city}, #{@forecast.current&.state}"
+    %h1.display-4.fw-normal.text-body-emphasis
+        = "#{@forecast.current&.temp}°"
+    %h3.display-6.fw-normal.text-body-emphasis
+        = @forecast.current&.condition
+
+.row.row-cols-1.row-cols-md-3.mb-3.text-center
+    - @forecast.forecast_days.each do |day|
+        .col
+            .card.mb-4.rounded-3.shadow-sm
+                .card-header.py-3
+                    %h4.my-0.fw-normal
+                        - if day.date == Date.today
+                            Today
+                        - else
+                            = day.date&.strftime("%A")
+                .card-body
+                    %h2.card-title
+                        = day.condition
+                    %ul.list-unstyled.mt-3.mb-4
+                        %li
+                            = "Max temp: #{day.maxtemp}°"
+                        %li
+                            = "Min temp: #{day.mintemp}°"

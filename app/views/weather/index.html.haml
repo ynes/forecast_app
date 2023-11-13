@@ -1,0 +1,20 @@
+.container.my-3
+    %header
+        .d-flex.flex-column.flex-md-row.align-items-center.pb-3.mb-4.border-bottom
+            .fs-4 Weather App
+    .bg-body-tertiary.p-5.rounded
+        = form_with url: weather_retrieve_url, method: :post, local: false do |f|
+            .form-floating.mb-3
+                = f.text_field :address, class: "form-control", required: true
+                = f.label :address, "US address or zip code."
+            = f.submit 'Search forecast', class: "btn btn-secondary"
+
+        %br
+        .response
+
+%footer.text-body-secondary.py-5
+    .container
+        %p.fs-6
+            Powered by
+            %a{ href: "https://www.weatherapi.com/", title: "Free Weather API" }
+                WeatherAPI.com
