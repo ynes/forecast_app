@@ -48,3 +48,10 @@ Weather APP is an application that displays the current weather and extended for
 
     ```bash
     rspec
+    ```
+ ## Screenshots
+![Form](https://github.com/ynes/forecast_app/assets/343013/12964a2f-7808-4e9e-82a7-2f94488ae1ae)
+
+![Result](https://github.com/ynes/forecast_app/assets/343013/3555ec24-3c8e-4641-bfac-52c64fe0840d)
+
+![Cached alert](https://github.com/ynes/forecast_app/assets/343013/8f22e203-f55c-4a6d-822f-9f05b78f97d8)
