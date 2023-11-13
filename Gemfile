@@ -10,7 +10,7 @@ gem "rails", "~> 7.0.8"
 gem "sprockets-rails"
 
 # Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
+#gem "pg", "~> 1.1"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -65,3 +65,16 @@ group :development do
   # gem "spring"
 end
 
+# For API requests and responses [https://github.com/lostisland/faraday]
+gem 'faraday'
+
+# To write views faster [https://github.com/haml/haml]
+gem 'haml'
+
+# Support for views
+gem "jquery-rails"
+gem "bootstrap"
+gem "sassc-rails"
+
+# Validate zip codes [https://github.com/monterail/zip-codes]
+gem 'zip-codes'
