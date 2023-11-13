@@ -1,0 +1,5 @@
+<%- if @forecast.errors.blank? %>
+    $('.response').html("<%= escape_javascript(render 'response') %>");
+<%- else %>
+    $('.response').html("<%= escape_javascript(render 'errors') %>");
+<%- end %>
