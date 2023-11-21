@@ -1,0 +1,5 @@
+<%- if @forecast.errors.blank? %>
+    <%= turbo_stream.update('response', partial: 'weather/response') %>
+<%- else %>
+    <%= turbo_stream.update('response', partial: 'weather/errors') %>
+<%- end %>
